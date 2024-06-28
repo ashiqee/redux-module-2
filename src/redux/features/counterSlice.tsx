@@ -20,10 +20,13 @@ const counterSlice = createSlice({
         },
         incrementByValue: (state,action :PayloadAction<number>)=>{
             state.count = state.count + action.payload 
+        },
+        decrementByValue: (state,action :PayloadAction<number>)=>{
+            state.count = state.count - action.payload 
         }
     },
 });
 
-export const {increment,decrement,incrementByValue} = counterSlice.actions;
+export const {increment,decrement,incrementByValue,decrementByValue} = counterSlice.actions;
 
 export default counterSlice.reducer;
